@@ -9,7 +9,7 @@ export class AwscicdpipelineStack extends cdk.Stack {
       const pipeline=  new CodePipeline(this, 'TestPipeline', {
         pipelineName: 'testPipeline',
         synth: new ShellStep('Synth',{
-          input :CodePipelineSource.gitHub('',''),
+          input :CodePipelineSource.gitHub('RajethaG/CDK','main'),
           commands:[
             'npm ci',
             'npm run build',
